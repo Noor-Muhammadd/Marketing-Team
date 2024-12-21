@@ -1,6 +1,6 @@
+"use client"
 import { Button } from "@mui/material";
 
-// components/HeroSection.js
 export default function Banner() {
   return (
     <section className="relative bg-gradient-to-b from-white to-blue-50 overflow-hidden">

@@ -1,14 +1,17 @@
-import Banner from '@/components/Banner/Banner';
-import Benefits from '@/components/Benifits/Benifits';
-import WhyChooseUs from '@/components/Choose/Choose';
-import ContentMarketing from '@/components/ContentMarketing/ContentMarketing';
-import Footer from '@/components/Footer/Footer';
-import IndustrySection from '@/components/Industry/Industry';
-import Navbar from '@/components/Navbar/Navbar';
-import Marketing360Reasons from '@/components/Reasons/Reasons';
-import TeamValue from '@/components/TeamValue/TeamValue';
-import Works from '@/components/Works/Works';
+import dynamic from 'next/dynamic';
 import React from 'react';
+
+const Banner = dynamic(() => import("@/components/Banner/Banner"), { ssr: true });
+const Benefits = dynamic(() => import("@/components/Benifits/Benifits"), { ssr: true });
+const WhyChooseUs = dynamic(() => import("@/components/Choose/Choose"), { ssr: true });
+const ContentMarketing = dynamic(() => import("@/components/ContentMarketing/ContentMarketing"), { ssr: true });
+const Footer = dynamic(() => import("@/components/Footer/Footer"), { ssr: true });
+const IndustrySection = dynamic(() => import("@/components/Industry/Industry"), { ssr: true });
+const Navbar = dynamic(() => import("@/components/Navbar/Navbar"), { ssr: true });
+const Marketing360Reasons = dynamic(() => import("@/components/Reasons/Reasons"), { ssr: true });
+const TeamValue = dynamic(() => import("@/components/TeamValue/TeamValue"), { ssr: true });
+const Works = dynamic(() => import("@/components/Works/Works"), { ssr: true });
+
 
 const page = () => {
   return (

@@ -1,8 +1,10 @@
+"use client"
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineCall } from "react-icons/md";
 
-export default function Navbar() {
+function Navbar() {
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -69,3 +71,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default dynamic(() => Promise.resolve(Navbar), { ssr: true });

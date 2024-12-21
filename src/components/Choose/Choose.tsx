@@ -1,4 +1,5 @@
 import { Button } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 
 export default function WhyChooseUs() {
@@ -12,7 +13,7 @@ export default function WhyChooseUs() {
           <div className="bg-white p-6 shadow-lg rounded-lg">
             <div className="flex items-start mb-4">
               <div className='w-16 h-16'>
-              <img src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/f9c5affa398f4979bafd6f19f0863441/20/4SoifmQp45JMgBnHiDiv8/Affordable.png" alt="" />
+              <Image src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/f9c5affa398f4979bafd6f19f0863441/20/4SoifmQp45JMgBnHiDiv8/Affordable.png" height={500} width={500} alt="" />
               </div>
             </div>
             <h3 className="text-lg font-semibold text-gray-900">We’re affordable</h3>
@@ -23,7 +24,7 @@ export default function WhyChooseUs() {
           <div className="bg-white p-6 shadow-lg rounded-lg">
             <div className="flex items-start mb-4">
               <div className="w-16 h-16">
-                <img src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/e3bdb16c5ef847458455a64866586357/20/4SoifmQp45JMgBnHiDiv8/Google.png" alt="" />
+                <Image src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/e3bdb16c5ef847458455a64866586357/20/4SoifmQp45JMgBnHiDiv8/Google.png" height={500} width={500} alt="" />
               </div>
             </div>
             <h3 className="text-lg font-semibold text-gray-900">Recommended by Google</h3>
@@ -35,7 +36,7 @@ export default function WhyChooseUs() {
           <div className="bg-white p-6 shadow-lg rounded-lg">
             <div className="flex items-start mb-4">
               <div className="w-16 h-16">
-                <img src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/c5631480097246878d445c4bc96f8436/20/4SoifmQp45JMgBnHiDiv8/meta.png" alt="" />
+                <Image src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/c5631480097246878d445c4bc96f8436/20/4SoifmQp45JMgBnHiDiv8/meta.png" height={500} width={500} alt="" />
               </div>
             </div>
             <h3 className="text-lg font-semibold text-gray-900">Loved by Meta</h3>
