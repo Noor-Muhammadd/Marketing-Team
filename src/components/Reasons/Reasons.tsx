@@ -1,17 +1,19 @@
+"use client"
 import { Button } from '@mui/material';
+import Image from 'next/image';
 import React from 'react';
 
 export default function Marketing360Reasons() {
   return (
     <div className="bg-gray-50 my-20 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <h2 className="text-3xl font-extrabold text-gray-700 sm:text-4xl text-center">
+        <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl text-center">
           6 reasons why you need Marketing 360 <sup>®</sup>
         </h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-          <div className="flex justify-around gap-6 bg-white p-6 shadow-lg rounded-lg">
+          <div className="flex justify-around gap-6 bg-white p-6">
             <div>
-              <img width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/fc98e835c17442ae85a152e4e79bc290/20/nGa1B4aos8qcQp1fmtp/one.png" alt="" />
+              <Image width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/fc98e835c17442ae85a152e4e79bc290/20/nGa1B4aos8qcQp1fmtp/one.png" alt="" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700">Everything you need</h3>
@@ -20,9 +22,9 @@ export default function Marketing360Reasons() {
               </p>
             </div>
           </div>
-          <div className="flex justify-around gap-6 bg-white p-6 shadow-lg rounded-lg">
+          <div className="flex justify-around gap-6 bg-white p-6">
             <div>
-              <img width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/f4aa848b38ad4f1e8f1c061f001eef3d/20/nGa1B4aos8qcQp1fmtp/two.png" alt="" />
+              <Image width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/f4aa848b38ad4f1e8f1c061f001eef3d/20/nGa1B4aos8qcQp1fmtp/two.png" alt="" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700">Get talent and technology</h3>
@@ -31,9 +33,9 @@ export default function Marketing360Reasons() {
               </p>
             </div>
           </div>
-          <div className="flex justify-around gap-6 bg-white p-6 shadow-lg rounded-lg">
+          <div className="flex justify-around gap-6 bg-white p-6">
             <div>
-              <img width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/bfab8642ceb640b7b71f40674a54ff2f/20/nGa1B4aos8qcQp1fmtp/3.png" alt="" />
+              <Image width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/bfab8642ceb640b7b71f40674a54ff2f/20/nGa1B4aos8qcQp1fmtp/3.png" alt="" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700">It’s easy</h3>
@@ -42,9 +44,9 @@ export default function Marketing360Reasons() {
               </p>
             </div>
           </div>
-          <div className="flex justify-around gap-6 bg-white p-6 shadow-lg rounded-lg">
+          <div className="flex justify-around gap-6 bg-white p-6">
             <div>
-              <img width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/de6e4822adf9477ab29918a78db67d09/20/nGa1B4aos8qcQp1fmtp/four.png" alt="" />
+              <Image width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/de6e4822adf9477ab29918a78db67d09/20/nGa1B4aos8qcQp1fmtp/four.png" alt="" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700">Save time</h3>
@@ -53,9 +55,9 @@ export default function Marketing360Reasons() {
               </p>
             </div>
           </div>
-          <div className="flex justify-around gap-6 bg-white p-6 shadow-lg rounded-lg">
+          <div className="flex justify-around gap-6 bg-white p-6">
             <div>
-              <img width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/b2006b83956341fcbb83a2208044109f/20/nGa1B4aos8qcQp1fmtp/five.png" alt="" />
+              <Image width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/b2006b83956341fcbb83a2208044109f/20/nGa1B4aos8qcQp1fmtp/five.png" alt="" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700">Save money</h3>
@@ -64,9 +66,9 @@ export default function Marketing360Reasons() {
               </p>
             </div>
           </div>
-          <div className="flex justify-around gap-6 bg-white p-6 shadow-lg rounded-lg">
+          <div className="flex justify-around gap-6 bg-white p-6">
             <div>
-              <img width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/b2c5eee8a45a4f9394a4e0b11d4b1c02/20/nGa1B4aos8qcQp1fmtp/six.png" alt="" />
+              <Image width={75} height={75} src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/b2c5eee8a45a4f9394a4e0b11d4b1c02/20/nGa1B4aos8qcQp1fmtp/six.png" alt="" />
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-700">Works better and better over time</h3>

@@ -8,7 +8,7 @@ const Footer = () => {
         <footer className="bg-[#24282f] text-gray-400 py-10">
             <div className="max-w-7xl mx-auto px-4">
                 {/* Top Section */}
-                <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-8">
                     {/* Logo and Badges */}
                     <div>
                         <Image src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/f32938a8bb624560a72e1ae1ac65255f/20/5feFb8zhrk/logoWhite.png" alt="Marketing 360" width={150} height={50} />

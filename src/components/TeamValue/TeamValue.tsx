@@ -44,42 +44,54 @@ export default function TeamValue() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
-      <h1 className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-10">
+      <h1 className="text-center text-3xl sm:text-4xl font-bold text-gray-800 mb-10">
         Here’s a list of things your team <br /> continually does to provide you  <br /> maximum value
       </h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      {/* First set of values */}
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {values.map((value, index) => (
           <div
             key={index}
             className="bg-white overflow-hidden flex flex-col"
           >
             <div className="p-6">
-              <h2 className="text-lg font-bold text-gray-800 mb-2">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
                 {value.title}
               </h2>
-              
-              <p className="text-gray-600">{value.description}</p>
+              <p className="text-gray-600 text-base sm:text-lg">{value.description}</p>
             </div>
           </div>
         ))}
       </div>
-      <img src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/e46de42d5ae343a781e2637502b6645a/20/GCuCv726gZycFxatRE56zp/teamBanner.png" alt="" />
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      {/* Image Banner */}
+      <div className="my-10">
+        <img
+          src="https://static.mywebsites360.com/c7cc6c7a55d9438c8f49111c9b6bf109/i/e46de42d5ae343a781e2637502b6645a/20/GCuCv726gZycFxatRE56zp/teamBanner.png"
+          alt="Team Banner"
+          className="w-full rounded-lg shadow-lg"
+        />
+      </div>
+
+      {/* Second set of values */}
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {values2.map((value, index) => (
           <div
             key={index}
             className="bg-white overflow-hidden flex flex-col"
           >
             <div className="p-6">
-              <h2 className="text-lg font-bold text-gray-800 mb-2">
+              <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
                 {value.title}
               </h2>
-              
-              <p className="text-gray-600">{value.description}</p>
+              <p className="text-gray-600 text-base sm:text-lg">{value.description}</p>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Button Section */}
       <div className="text-center mt-10">
         <Button variant="contained" size="large">
           Plans & Pricing

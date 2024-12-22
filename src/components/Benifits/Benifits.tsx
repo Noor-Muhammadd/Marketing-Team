@@ -18,84 +18,27 @@ import mobile from "../../assets/icons/mobileApp.png";
 
 export default function Benefits() {
   const benefits = [
-    {
-      title: "Marketing Team",
-      description: "Team to turbocharge your marketing",
-      icon: team,
-    },
-    {
-      title: "Websites",
-      description: "Success starts with a modern website",
-      icon: website,
-    },
-    {
-      title: "Ecommerce",
-      description: "Sell your products everywhere online",
-      icon: shop,
-    },
-    {
-      title: "Payments",
-      description: "Get paid easier, faster, your way",
-      icon: payment,
-    },
-    {
-      title: "Point of Sale",
-      description: "All-in-one business management",
-      icon: scale,
-    },
-    {
-      title: "CRM",
-      description: "Stay organized as you scale and grow",
-      icon: crm,
-    },
+    { title: "Marketing Team", description: "Team to turbocharge your marketing", icon: team },
+    { title: "Websites", description: "Success starts with a modern website", icon: website },
+    { title: "Ecommerce", description: "Sell your products everywhere online", icon: shop },
+    { title: "Payments", description: "Get paid easier, faster, your way", icon: payment },
+    { title: "Point of Sale", description: "All-in-one business management", icon: scale },
+    { title: "CRM", description: "Stay organized as you scale and grow", icon: crm },
     { title: "Forms", description: "Create forms for anything", icon: form },
-    {
-      title: "Email Marketing",
-      description: "Stay top of mind with email and text",
-      icon: website,
-    },
-    {
-      title: "Listings",
-      description: "Get found on 50+ local sites/apps",
-      icon: listening,
-    },
-    {
-      title: "Reputation",
-      description: "Gain the edge of a good reputation",
-      icon: repu,
-    },
-    {
-      title: "Social",
-      description: "Streamline your social media",
-      icon: social,
-    },
-    {
-      title: "Content",
-      description: "Level up your content marketing",
-      icon: content,
-    },
-    {
-      title: "Ads",
-      description: "Fuel growth with multi-channel ads",
-      icon: camp,
-    },
-
-    {
-      title: "Intelligence",
-      description: "In-depth reporting you need to win",
-      icon: intelligence,
-    },
-    {
-      title: "Mobile App",
-      description: "Learn more about our mobile app",
-      icon: mobile,
-    },
+    { title: "Email Marketing", description: "Stay top of mind with email and text", icon: website },
+    { title: "Listings", description: "Get found on 50+ local sites/apps", icon: listening },
+    { title: "Reputation", description: "Gain the edge of a good reputation", icon: repu },
+    { title: "Social", description: "Streamline your social media", icon: social },
+    { title: "Content", description: "Level up your content marketing", icon: content },
+    { title: "Ads", description: "Fuel growth with multi-channel ads", icon: camp },
+    { title: "Intelligence", description: "In-depth reporting you need to win", icon: intelligence },
+    { title: "Mobile App", description: "Learn more about our mobile app", icon: mobile },
   ];
 
   return (
     <div className="bg-gray-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-extrabold text-gray-700 sm:text-4xl">
+        <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
           Plus, all of these great benefits.
         </h2>
         <p className="mt-4 text-lg text-gray-600">
@@ -103,13 +46,14 @@ export default function Benefits() {
           tools you need to manage your business, but you also get the dedicated
           marketing team you need to grow your business — all in one platform.
         </p>
+
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (
             <div
               key={index}
               className="flex flex-col bg-white p-6 shadow-lg rounded-lg"
             >
-              <div className="flex text-start justify-around items-center mb-4">
+              <div className="flex text-start gap-6 items-center mb-4">
                 <div className="text-xl text-blue-500">
                   <Image
                     src={benefit.icon}
@@ -139,7 +83,7 @@ export default function Benefits() {
       <div className="bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Heading */}
-          <h1 className="text-[52px] font-bold text-gray-700 sm:text-4xl">
+          <h1 className="text-3xl leading-[70px]	 sm:text-[52px] font-semibold text-gray-800">
             Get everything you need to <br />
             <span className="text-blue-600">manage and grow</span> your
             business.
@@ -147,10 +91,7 @@ export default function Benefits() {
 
           {/* Button */}
           <div className="mb-10 mt-6">
-            <Button
-              variant="contained"
-              size="large"
-            >
+            <Button variant="contained" size="large">
               Plans & Pricing
             </Button>
           </div>
@@ -166,11 +107,9 @@ export default function Benefits() {
         <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
           {/* Star Ratings */}
           <div className="flex items-center space-x-2 text-yellow-500 text-2xl">
-            {/* Render 4 Stars */}
             {[...Array(5)].map((_, i) => (
               <span key={i}>★</span>
             ))}
-            {/* Review Count */}
             <p className="text-gray-800 font-medium text-lg">3,500+ Reviews</p>
           </div>
 
