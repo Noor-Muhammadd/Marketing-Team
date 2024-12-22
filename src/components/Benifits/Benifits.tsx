@@ -51,7 +51,7 @@ export default function Benefits() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="flex flex-col bg-white p-6 shadow-lg rounded-lg"
+              className="flex flex-col bg-white p-6 shadow-sm rounded-lg"
             >
               <div className="flex text-start gap-6 items-center mb-4">
                 <div className="text-xl text-blue-500">
