@@ -4,7 +4,80 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineCall } from "react-icons/md";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { FaChevronDown } from "react-icons/fa"; // Dropdown icon
 import { useState } from "react";
+
+import team from "../../assets/icons/team.png";
+import website from "../../assets/icons/website.png";
+import shop from "../../assets/icons/shopApp.png";
+import payment from "../../assets/icons/Payments.png";
+import scale from "../../assets/icons/Point_of_sale.png";
+import crm from "../../assets/icons/CRM.png";
+import form from "../../assets/icons/Forms.png";
+import listening from "../../assets/icons/Listings.png";
+import repu from "../../assets/icons/Reputation.png";
+import social from "../../assets/icons/Social2.png";
+import content from "../../assets/icons/Content.png";
+import camp from "../../assets/icons/camp.png";
+import intelligence from "../../assets/icons/Intelligence.png";
+import mobile from "../../assets/icons/mobileApp.png";
+
+const benefits = [
+  { title: "Marketing Team", description: "Team to turbocharge your marketing", icon: team },
+  { title: "Websites", description: "Success starts with a modern website", icon: website },
+  { title: "Ecommerce", description: "Sell your products everywhere online", icon: shop },
+  { title: "Payments", description: "Get paid easier, faster, your way", icon: payment },
+  { title: "Point of Sale", description: "All-in-one business management", icon: scale },
+  { title: "CRM", description: "Stay organized as you scale and grow", icon: crm },
+  { title: "Forms", description: "Create forms for anything", icon: form },
+  { title: "Email Marketing", description: "Stay top of mind with email and text", icon: website },
+  { title: "Listings", description: "Get found on 50+ local sites/apps", icon: listening },
+  { title: "Reputation", description: "Gain the edge of a good reputation", icon: repu },
+  { title: "Social", description: "Streamline your social media", icon: social },
+  { title: "Content", description: "Level up your content marketing", icon: content },
+  { title: "Ads", description: "Fuel growth with multi-channel ads", icon: camp },
+  { title: "Intelligence", description: "In-depth reporting you need to win", icon: intelligence },
+  { title: "Mobile App", description: "Learn more about our mobile app", icon: mobile },
+];
+
+const moreOptions = [
+  {
+    title: "About",
+    description: "Description for Option One.",
+  },
+  {
+    title: "Create Service",
+    description: "Description for Option Two.",
+  },
+  {
+    title: "Success Stories",
+    description: "Description for Option Three.",
+  },
+  {
+    title: "Our Reviews",
+    description: "Description for Option One.",
+  },
+  {
+    title: "Partners",
+    description: "Description for Option Two.",
+  },
+  {
+    title: "Market Place",
+    description: "Description for Option Three.",
+  },
+  {
+    title: "Blog",
+    description: "Description for Option Three.",
+  },
+  {
+    title: "Support",
+    description: "Description for Option Three.",
+  },
+  {
+    title: "Contact Us",
+    description: "Description for Option Three.",
+  },
+];
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,54 +99,78 @@ function Navbar() {
           />
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
+            {/* Tour Platform */}
             <div className="group relative">
-              <button className="ml-8 text-gray-700 font-bold hover:text-blue-500">
-                Tour Platform
+              <button className="ml-8 flex items-center text-gray-700 font-bold hover:text-blue-500">
+                Tour Platform <FaChevronDown className="ml-2 text-blue-500 text-sm" />
               </button>
-              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md p-2 w-48">
-                <Link
-                  href="/features"
-                  className="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100 rounded"
-                >
-                  Features
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="block px-4 py-2 text-gray-700 font-bold hover:bg-gray-100 rounded"
-                >
-                  Pricing
-                </Link>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md p-6 w-[850px]">
+                {/* Adjusted width for dropdown */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {benefits.map((benefit, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col bg-white p-4 shadow-sm rounded-lg"
+                    >
+                      <div className="flex text-start gap-4 items-center mb-2">
+                        <div className="text-xl text-blue-500">
+                          <Image
+                            src={benefit.icon} // Ensure the icon paths are correct
+                            alt={benefit.title}
+                            width={30} // Adjust icon size if needed
+                            height={30}
+                          />
+                        </div>
+                        <div>
+                          <h3 className="text-sm font-semibold text-gray-900">
+                            {benefit.title}
+                          </h3>
+                          <p className="text-gray-600 text-xs">{benefit.description}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="group relative">
-              <button className="text-gray-700 font-bold hover:text-blue-500">
-                Tour by Industry
-              </button>
-              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md p-2 w-48">
-                <Link
-                  href="/retail"
-                  className="block font-bold px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
-                >
-                  Retail
-                </Link>
-                <Link
-                  href="/real-estate"
-                  className="block font-bold px-4 py-2 text-gray-700 hover:bg-gray-100 rounded"
-                >
-                  Real Estate
-                </Link>
-              </div>
-            </div>
+
+
             <Link
-              href="/more"
+              href="/tour-by-industry"
               className="text-gray-700 font-bold hover:text-blue-500"
             >
-              More
+              Tour by Industry
             </Link>
-            <Link
-              href="/careers"
-              className="text-gray-700 font-bold hover:text-blue-500"
-            >
+
+            {/* More Dropdown */}
+            <div className="group relative">
+              <button className="flex items-center text-gray-700 font-bold hover:text-blue-500">
+                More <FaChevronDown className="ml-2 text-blue-500 text-sm" />
+              </button>
+              <div className="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-md p-6 w-[750px]">
+                {/* Adjusted width for dropdown */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {moreOptions.map((benefit, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col bg-white p-4 shadow-sm rounded-lg"
+                    >
+                      <div className="flex text-start gap-6 items-center mb-2">
+                        <div>
+                          <h3 className="text-base font-semibold mb-2 text-gray-900">
+                            {benefit.title}
+                          </h3>
+                          <p className="text-gray-600 text-sm">{benefit.description}</p>
+                        <hr  className="mt-8"/>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <Link href="/careers" className="text-gray-700 font-bold hover:text-blue-500">
               Careers
             </Link>
           </div>
